@@ -1,5 +1,6 @@
 name: Run Java Console App
 on: [push]
+
 jobs:
   run-java:
     runs-on: ubuntu-latest
@@ -14,7 +15,7 @@ jobs:
           java-version: '17'
 
       - name: Compile Java program
-        run: javac Main.java
+        run: javac -d . Project/RailwayReservationSystem.java
 
       - name: Run Java program
-        run: java Main
+        run: java Project.RailwayReservationSystem
